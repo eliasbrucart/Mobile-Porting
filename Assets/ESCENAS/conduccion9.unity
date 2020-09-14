@@ -114541,6 +114541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camion - new 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4335705224816978, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.5
