@@ -104152,7 +104152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimEntrada: Entrada
   AnimSalida: Salida
-  ContrDesc: {fileID: 0}
+  ContrDesc: {fileID: 13068}
   PuertaAnimada: {fileID: 1425887806}
 --- !u!114 &13020
 MonoBehaviour:
@@ -104168,7 +104168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimEntrada: Entrada
   AnimSalida: Salida
-  ContrDesc: {fileID: 0}
+  ContrDesc: {fileID: 13064}
   PuertaAnimada: {fileID: 1049659492}
 --- !u!114 &13021
 MonoBehaviour:
