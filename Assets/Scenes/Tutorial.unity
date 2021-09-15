@@ -128,6 +128,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2441230079235752964, guid: 15d5a1914b6c8bd4ebe32f594a615f67,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441230079235752969, guid: 15d5a1914b6c8bd4ebe32f594a615f67,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2441230079235763864, guid: 15d5a1914b6c8bd4ebe32f594a615f67,
         type: 3}
       propertyPath: m_RootOrder
@@ -190,6 +200,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d5a1914b6c8bd4ebe32f594a615f67, type: 3}
+--- !u!1 &513145371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2441230079235767016, guid: 15d5a1914b6c8bd4ebe32f594a615f67,
+    type: 3}
+  m_PrefabInstance: {fileID: 513145370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &513145372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2441230079235767037, guid: 15d5a1914b6c8bd4ebe32f594a615f67,
+    type: 3}
+  m_PrefabInstance: {fileID: 513145370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &513145373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513145371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc76656541d56c46b6df90fefccb8d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedInput: 1
+  EstAct: 0
+--- !u!114 &513145374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513145372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc76656541d56c46b6df90fefccb8d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedInput: 0
+  EstAct: 0
 --- !u!1 &880416717
 GameObject:
   m_ObjectHideFlags: 0
