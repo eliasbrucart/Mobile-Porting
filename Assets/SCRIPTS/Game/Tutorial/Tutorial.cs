@@ -48,7 +48,7 @@ public class Tutorial : MonoBehaviour
     private void CheckTutorialFinish()
     {
         if (EstAct == StatesTutorial.Finalizado)
-            SceneManager.LoadScene("Gameplay singleplayer");
+            SceneManager.LoadScene("Gameplay multiplayer");
         //chequear que tutorial termino para darle velocidad al camion correspondiente
     }
 }

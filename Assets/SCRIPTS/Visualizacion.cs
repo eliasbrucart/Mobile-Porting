@@ -15,7 +15,7 @@ public class Visualizacion : MonoBehaviour
 	Player Pj;
 	
 	//las distintas camaras
-	public Camera CamCalibracion;
+	//public Camera CamCalibracion;
 	public Camera CamConduccion;
 	public Camera CamDescarga;
 	
@@ -146,28 +146,28 @@ public class Visualizacion : MonoBehaviour
 	
 	public void CambiarACalibracion()
 	{
-		CamCalibracion.enabled = true;
+		//CamCalibracion.enabled = true;
 		CamConduccion.enabled = false;
 		CamDescarga.enabled = false;
 	}
 	
 	public void CambiarATutorial()
 	{
-		CamCalibracion.enabled = false;
+		//CamCalibracion.enabled = false;
 		CamConduccion.enabled = true;
 		CamDescarga.enabled = false;
 	}
 	
 	public void CambiarAConduccion()
 	{
-		CamCalibracion.enabled = false;
+		//CamCalibracion.enabled = false;
 		CamConduccion.enabled = true;
 		CamDescarga.enabled = false;
 	}
 	
 	public void CambiarADescarga()
 	{
-		CamCalibracion.enabled = false;
+		//CamCalibracion.enabled = false;
 		CamConduccion.enabled = false;
 		CamDescarga.enabled = true;
 	}
@@ -195,7 +195,7 @@ public class Visualizacion : MonoBehaviour
 			break;
 		}
 		
-		CamCalibracion.rect = r;
+		//CamCalibracion.rect = r;
 		CamConduccion.rect = r;
 		CamDescarga.rect = r;
 		

@@ -115091,6 +115091,16 @@ PrefabInstance:
       propertyPath: IdPlayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: ContrDesc
+      value: 
+      objectReference: {fileID: 13068}
+    - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: ContrTuto
+      value: 
+      objectReference: {fileID: 13046}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: CamDescarga
@@ -115166,16 +115176,16 @@ MonoBehaviour:
   TiempoDeJuego: 60
   EstAct: 1
   PlayerInfo1:
-    FinCalibrado: 0
-    FinTuto1: 0
-    FinTuto2: 0
+    FinCalibrado: 1
+    FinTuto1: 1
+    FinTuto2: 1
     LadoAct: 0
     TipoDeInput: 1
     PJ: {fileID: 13058}
   PlayerInfo2:
-    FinCalibrado: 0
-    FinTuto1: 0
-    FinTuto2: 0
+    FinCalibrado: 1
+    FinTuto1: 1
+    FinTuto2: 1
     LadoAct: 1
     TipoDeInput: 0
     PJ: {fileID: 27660010}
@@ -115264,6 +115274,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: ContrDesc
+      value: 
+      objectReference: {fileID: 13064}
+    - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: ContrTuto
+      value: 
+      objectReference: {fileID: 13047}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: CamDescarga
