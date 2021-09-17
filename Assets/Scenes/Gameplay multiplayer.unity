@@ -115164,13 +115164,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TiempoDeJuego: 60
-  EstAct: 0
+  EstAct: 1
   PlayerInfo1:
     FinCalibrado: 0
     FinTuto1: 0
     FinTuto2: 0
     LadoAct: 0
-    TipoDeInput: 0
+    TipoDeInput: 1
     PJ: {fileID: 13058}
   PlayerInfo2:
     FinCalibrado: 0
@@ -115181,8 +115181,8 @@ MonoBehaviour:
     PJ: {fileID: 27660010}
   Player1: {fileID: 13058}
   Player2: {fileID: 27660010}
-  Esqueleto1: {fileID: 6257}
-  Esqueleto2: {fileID: 1103461344}
+  Esqueleto1: {fileID: 3493}
+  Esqueleto2: {fileID: 3492}
   PosEsqsCarrera: []
   ConteoPosEsc:
     serializedVersion: 2
@@ -115205,11 +115205,18 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   PosCamion1Tuto: {x: 0, y: 0, z: 0}
   PosCamion2Tuto: {x: 0, y: 0, z: 0}
-  ObjsCalibracion1: []
-  ObjsCalibracion2: []
-  ObjsTuto1: []
-  ObjsTuto2: []
-  ObjsCarrera: []
+  ObjsCalibracion1:
+  - {fileID: 3117}
+  ObjsCalibracion2:
+  - {fileID: 2683}
+  ObjsTuto1:
+  - {fileID: 3095}
+  ObjsTuto2:
+  - {fileID: 3076}
+  ObjsCarrera:
+  - {fileID: 3124}
+  - {fileID: 3102}
+  - {fileID: 213}
 --- !u!1001 &629314373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115256,6 +115263,21 @@ PrefabInstance:
     - target: {fileID: 4827866222774608, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: CamDescarga
+      value: 
+      objectReference: {fileID: 6359}
+    - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: CamConduccion
+      value: 
+      objectReference: {fileID: 6358}
+    - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: CamCalibracion
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
