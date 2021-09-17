@@ -253,7 +253,7 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCarrera.Length; i++)
 		{
-			ObjsCarrera[i].SetActive(false);
+			ObjsCarrera[i].SetActive(true);
 		}
 
 
@@ -285,7 +285,8 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCalibracion1.Length; i++)
 		{
-			ObjsCalibracion1[i].SetActive(false);
+			//ObjsCalibracion1[i].SetActive(false);
+			ObjsCalibracion1[i].SetActive(true);
 		}
 		Player1.GetComponent<Frenado>().Frenar();
 		Player1.CambiarATutorial();
@@ -297,7 +298,8 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCalibracion2.Length; i++)
 		{
-			ObjsCalibracion2[i].SetActive(false);
+			//ObjsCalibracion2[i].SetActive(false);
+			ObjsCalibracion2[i].SetActive(true);
 		}
 
 		for (int i = 0; i < ObjsTuto2.Length; i++)
@@ -430,14 +432,16 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCalibracion1.Length; i++)
 		{
-			ObjsCalibracion1[i].SetActive(false);
+			//ObjsCalibracion1[i].SetActive(false);
+			ObjsCalibracion1[i].SetActive(true);
 		}
 
 		PlayerInfo2.FinCalibrado = true;
 
 		for (int i = 0; i < ObjsCalibracion2.Length; i++)
 		{
-			ObjsCalibracion2[i].SetActive(false);
+			//ObjsCalibracion2[i].SetActive(false);
+			ObjsCalibracion2[i].SetActive(true);
 		}
 
 		for (int i = 0; i < ObjsTuto2.Length; i++)
@@ -504,7 +508,6 @@ public class GameManager : MonoBehaviour
 		if (playerID == 0)
 		{
 			PlayerInfo1.FinTuto1 = true;
-
 		}
 		else if (playerID == 1)
 		{

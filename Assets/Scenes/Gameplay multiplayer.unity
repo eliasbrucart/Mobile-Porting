@@ -115116,6 +115116,11 @@ PrefabInstance:
       propertyPath: CamCalibracion
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114998836577221504, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 27660011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
 --- !u!114 &27660010 stripped
@@ -115128,6 +115133,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7272f53a2d4f7174a8c5cb502d24bb0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &27660011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114630957717379974, guid: b81b1a58a0f14c9439cbdd014e695f71,
+    type: 3}
+  m_PrefabInstance: {fileID: 27660009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776f471ddb87b8345b236906c8fac0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &216771476
@@ -115299,8 +115316,25 @@ PrefabInstance:
       propertyPath: CamCalibracion
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114998836577221504, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: carController
+      value: 
+      objectReference: {fileID: 629314374}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b81b1a58a0f14c9439cbdd014e695f71, type: 3}
+--- !u!114 &629314374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114630957717379974, guid: b81b1a58a0f14c9439cbdd014e695f71,
+    type: 3}
+  m_PrefabInstance: {fileID: 629314373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776f471ddb87b8345b236906c8fac0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1049659492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: 42ccde1c0abcc4944b4fc7242368f31a,

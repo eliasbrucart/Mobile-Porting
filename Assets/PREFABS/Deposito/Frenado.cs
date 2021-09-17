@@ -8,7 +8,6 @@ public class Frenado : MonoBehaviour
 	
 	ControlDireccion KInput;
 	
-	
 	float DagMax = 15f;
 	float DagIni = 1f;
 	int Contador = 0;
@@ -20,22 +19,15 @@ public class Frenado : MonoBehaviour
 	
 	public bool Frenando = false;
 	bool ReduciendoVel = false;
+
+	[SerializeField] CarController carController;
 	
-	//-----------------------------------------------------//
-	
-	// Use this for initialization
 	void Start () 
 	{
 		//RestaurarVel();
 		Frenar();
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
-	}
-	
+
 	void FixedUpdate ()
 	{
 		if(Frenando)
@@ -77,12 +69,10 @@ public class Frenado : MonoBehaviour
 	{
 		//Debug.Log(gameObject.name + "frena");
 		GetComponent<ControlDireccion>().enabled = false;
-		gameObject.SendMessage("SetAcel", 0f);
+		carController.SetAcel(0.0f);
 		GetComponent<Rigidbody>().velocity = Vector3.zero;
 		
 		Frenando = true;
-		
-		//gameObject.SendMessage("SetDragZ", 25f);
 		Tempo = 0;
 		Contador = 0;
 	}
@@ -91,7 +81,7 @@ public class Frenado : MonoBehaviour
 	{
 		//Debug.Log(gameObject.name + "restaura la velociad");
 		GetComponent<ControlDireccion>().enabled = true;
-		gameObject.SendMessage("SetAcel", 1f);
+		carController.SetAcel(1.0f);
 		Frenando = false;
 		Tempo = 0;
 		Contador = 0;
