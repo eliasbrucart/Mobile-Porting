@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 	public bool EnDescarga = false;
 	
 	public ControladorDeDescarga ContrDesc;
-	public ContrCalibracion ContrCalib;
+	//public ContrCalibracion ContrCalib;
 	public ContrTutorial ContrTuto;
 	
 	Visualizacion MiVisualizacion;

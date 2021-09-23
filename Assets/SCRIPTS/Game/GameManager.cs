@@ -380,7 +380,7 @@ public class GameManager : MonoBehaviour
 	{
 		pjInf.PJ.GetComponent<Visualizacion>().SetLado(pjInf.LadoAct);
 		//en este momento, solo la primera vez, deberia setear la otra camara asi no se superponen
-		pjInf.PJ.ContrCalib.IniciarTesteo();
+		//pjInf.PJ.ContrCalib.IniciarTesteo();
 		PosSeteada = true;
 
 

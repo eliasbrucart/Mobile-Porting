@@ -264,53 +264,53 @@ public class Visualizacion : MonoBehaviour
 		//GUI.Box(R, "$" + PrepararNumeros(Pj.Dinero));
 	}
 	
-	void SetCalibr()
-	{
-		//GUI.skin = GS_TutoCalib;
-		
-		//R.width = ReadyEsc.x *Screen.width /100;
-		//R.height = ReadyEsc.y *Screen.height /100;
-		//R.x = ReadyPos.x *Screen.width /100;
-		//R.y = ReadyPos.y *Screen.height /100;
-		//if(LadoAct == Visualizacion.Lado.Der)
-		//	R.x = (Screen.width) - R.x - R.width;
-		
-		switch(Pj.ContrCalib.EstAct)
-		{
-		case ContrCalibracion.Estados.Calibrando:
-			
-			//pongase en posicion para iniciar
-			//GS_TutoCalib.box.normal.background = ImaEnPosicion;			
-			//GUI.Box(R,"");
-			
-			break;
-			
-		case ContrCalibracion.Estados.Tutorial:
-			//tome la bolsa y depositela en el estante
-			
-			TempoIntTuto += T.GetDT();
-			if(TempoIntTuto >= Intervalo)
-			{
-				TempoIntTuto = 0;
-				if(EnCurso + 1 < ImagenesDelTuto.Length)
-					EnCurso++;
-				else
-					EnCurso = 0;
-			}
-			//GS_TutoCalib.box.normal.background = ImagenesDelTuto[EnCurso];
-			
-			//GUI.Box(R,"");
-			
-			break;
-			
-		case ContrCalibracion.Estados.Finalizado:
-			//esperando al otro jugador		
-			//GS_TutoCalib.box.normal.background = ImaReady;
-			GUI.Box(R,"");
-			
-			break;
-		}
-	}
+	//void SetCalibr()
+	//{
+	//	//GUI.skin = GS_TutoCalib;
+	//	
+	//	//R.width = ReadyEsc.x *Screen.width /100;
+	//	//R.height = ReadyEsc.y *Screen.height /100;
+	//	//R.x = ReadyPos.x *Screen.width /100;
+	//	//R.y = ReadyPos.y *Screen.height /100;
+	//	//if(LadoAct == Visualizacion.Lado.Der)
+	//	//	R.x = (Screen.width) - R.x - R.width;
+	//	
+	//	switch(Pj.ContrCalib.EstAct)
+	//	{
+	//	case ContrCalibracion.Estados.Calibrando:
+	//		
+	//		//pongase en posicion para iniciar
+	//		//GS_TutoCalib.box.normal.background = ImaEnPosicion;			
+	//		//GUI.Box(R,"");
+	//		
+	//		break;
+	//		
+	//	case ContrCalibracion.Estados.Tutorial:
+	//		//tome la bolsa y depositela en el estante
+	//		
+	//		TempoIntTuto += T.GetDT();
+	//		if(TempoIntTuto >= Intervalo)
+	//		{
+	//			TempoIntTuto = 0;
+	//			if(EnCurso + 1 < ImagenesDelTuto.Length)
+	//				EnCurso++;
+	//			else
+	//				EnCurso = 0;
+	//		}
+	//		//GS_TutoCalib.box.normal.background = ImagenesDelTuto[EnCurso];
+	//		
+	//		//GUI.Box(R,"");
+	//		
+	//		break;
+	//		
+	//	case ContrCalibracion.Estados.Finalizado:
+	//		//esperando al otro jugador		
+	//		//GS_TutoCalib.box.normal.background = ImaReady;
+	//		GUI.Box(R,"");
+	//		
+	//		break;
+	//	}
+	//}
 	
 	void SetTuto()
 	{
