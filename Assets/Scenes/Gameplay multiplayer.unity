@@ -115254,6 +115254,30 @@ MonoBehaviour:
   - {fileID: 3124}
   - {fileID: 3102}
   - {fileID: 213}
+--- !u!1 &320069022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183649624865455278, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 183649625371818156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &320069023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320069022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989d7a5caec9cdb49bf6f0c7b2eafed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stick: {fileID: 729396506}
+  background: {fileID: 183649625371818157}
+  playerInputX: Horizontal_1
+  playerInputY: Vertical_1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  joystickLimit: 100
 --- !u!1001 &629314373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115490,6 +115514,12 @@ PrefabInstance:
       objectReference: {fileID: 3127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf53947154efebf45815432c8c0ee91e, type: 3}
+--- !u!224 &729396506 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 183649624224751295, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 183649625371818156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &765029644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115622,6 +115652,12 @@ PrefabInstance:
 --- !u!224 &765029645 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 183649624865455279, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 765029644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &774501364 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 183649624224751295, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
     type: 3}
   m_PrefabInstance: {fileID: 765029644}
   m_PrefabAsset: {fileID: 0}
@@ -115796,6 +115832,42 @@ MonoBehaviour:
   miInput: 0
   Desde: {fileID: 13062}
   Hasta: {fileID: 13063}
+--- !u!1 &1339824294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183649624865455278, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 765029644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1339824295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 183649624865455272, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 765029644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339824294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1339824296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339824294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989d7a5caec9cdb49bf6f0c7b2eafed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stick: {fileID: 774501364}
+  background: {fileID: 1339824295}
+  playerInputX: Horizontal_2
+  playerInputY: Vertical_2
+  color: {r: 0, g: 0, b: 0, a: 0}
+  joystickLimit: 100
 --- !u!1 &1425887806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: 42ccde1c0abcc4944b4fc7242368f31a,
@@ -116099,3 +116171,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4b93a12c109ab3488c3ad62b94ad7b1, type: 3}
+--- !u!114 &183649625371818157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 183649624865455272, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 183649625371818156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320069022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

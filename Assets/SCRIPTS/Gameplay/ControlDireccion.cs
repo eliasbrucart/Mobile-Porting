@@ -90,20 +90,20 @@ public class ControlDireccion : MonoBehaviour
 			break;
             case TipoInput.AWSD:
                 if (Habilitado) {
-                    if (Input.GetKey(KeyCode.A)) {
+                    if (Input.GetKey(KeyCode.A) || InputManager.Instance.GetAxis("Horizontal_1") < 0) {
                         gameObject.SendMessage("SetGiro", -1);
                     }
-                    if (Input.GetKey(KeyCode.D)) {
+                    if (Input.GetKey(KeyCode.D) || InputManager.Instance.GetAxis("Horizontal_1") > 0) {
                         gameObject.SendMessage("SetGiro", 1);
                     }
                 }
                 break;
             case TipoInput.Arrows:
                 if (Habilitado) {
-                    if (Input.GetKey(KeyCode.LeftArrow)) {
+                    if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Instance.GetAxis("Horizontal_2") < 0) {
                         gameObject.SendMessage("SetGiro", -1);
                     }
-                    if (Input.GetKey(KeyCode.RightArrow)) {
+                    if (Input.GetKey(KeyCode.RightArrow) || InputManager.Instance.GetAxis("Horizontal_2") > 0) {
                         gameObject.SendMessage("SetGiro", 1);
                     }
                 }
