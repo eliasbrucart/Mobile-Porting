@@ -46,7 +46,7 @@ public class ControladorDeDescarga : MonoBehaviour
 	{
 		for (int i = 0; i < Componentes.Length; i++)
 		{
-			Componentes[i].SetActive(false);
+			Componentes[i].gameObject.SetActive(false);
 		}
 		
 		CollCamion = Pj.GetComponentInChildren<MeshCollider>();
@@ -80,12 +80,12 @@ public class ControladorDeDescarga : MonoBehaviour
 	public void Activar(Deposito2 d)
 	{
 		Dep = d;//recibe el deposito para que sepa cuando dejarlo ir al camion
-		CamaraConduccion.SetActive(false);//apaga la camara de conduccion
+		CamaraConduccion.gameObject.SetActive(false);//apaga la camara de conduccion
 			
 		//activa los componentes
 		for (int i = 0; i < Componentes.Length; i++)
 		{
-			Componentes[i].SetActive(true);
+			Componentes[i].gameObject.SetActive(true);
 		}
 		
 			
@@ -186,10 +186,10 @@ public class ControladorDeDescarga : MonoBehaviour
 		
 		for (int i = 0; i < Componentes.Length; i++)
 		{
-			Componentes[i].SetActive(false);
+			Componentes[i].gameObject.SetActive(false);
 		}
 		
-		CamaraConduccion.SetActive(true);
+		CamaraConduccion.gameObject.SetActive(true);
 		
 		CollCamion.enabled = true;
 		

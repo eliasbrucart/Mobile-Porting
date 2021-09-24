@@ -168,7 +168,7 @@ public class Visualizacion : MonoBehaviour
 	public void CambiarADescarga()
 	{
 		//CamCalibracion.enabled = false;
-		CamConduccion.enabled = true;
+		CamConduccion.enabled = false;
 		CamDescarga.enabled = true;
 	}
 	
