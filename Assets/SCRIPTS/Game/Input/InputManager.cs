@@ -27,13 +27,18 @@ public class InputManager : MonoBehaviour
         axisValues[axis] = value;
     }
 
-    void Start()
+    public float GetAxis(string axis)
     {
-        
+#if UNITY_EDITOR
+        return axisValues[axis] + Input.GetAxis(axis);
+#elif UNITY_ANDROID || UNITY_IOS
+        return axisValues[axis];
+#elif UNITY_STANDALONE
+        return Input.GetAxis(axis);
+#endif
     }
-
-    void Update()
+    public bool GetButton(string button)
     {
-        
+        return Input.GetButton(button);
     }
 }
