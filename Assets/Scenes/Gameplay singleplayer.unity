@@ -115275,8 +115275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stick: {fileID: 729396506}
   background: {fileID: 183649625371818157}
-  playerInputX: Horizontal_1
-  playerInputY: Vertical_1
+  playerInputX: Horizontal_2
+  playerInputY: Vertical_2
   color: {r: 1, g: 0.038367633, b: 0, a: 0}
   joystickLimit: 100
 --- !u!1001 &629314373

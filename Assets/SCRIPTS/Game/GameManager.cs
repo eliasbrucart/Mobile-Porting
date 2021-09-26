@@ -91,7 +91,10 @@ public class GameManager : MonoBehaviour
 		//REINICIAR
 		if (Input.GetKey(KeyCode.Mouse1) && Input.GetKey(KeyCode.Keypad0))
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			if(modo == ModoJuego.Singleplayer)
+				ScenesManager.Instance.ChangeScene("Gameplay singleplayer");
+			else
+				ScenesManager.Instance.ChangeScene("Gameplay multiplayer");
 		}
 
 		//CIERRA LA APLICACION
@@ -105,41 +108,46 @@ public class GameManager : MonoBehaviour
 		{
 			case EstadoJuego.Calibrando:
 
-				//SKIP EL TUTORIAL
-				if (Input.GetKey(KeyCode.Mouse0) &&
-				   Input.GetKey(KeyCode.Keypad0))
+				switch (modo)
 				{
-					if (PlayerInfo1 != null && PlayerInfo2 != null)
-					{
-						FinCalibracion(0);
-						FinCalibracion(1);
+					case ModoJuego.Singleplayer:
+						//SKIP EL TUTORIAL
+						if (Input.GetKey(KeyCode.Mouse0) &&
+						   Input.GetKey(KeyCode.Keypad0))
+						{
+							if (PlayerInfo1 != null && PlayerInfo2 != null)
+							{
+								FinCalibracion(0);
+								FinCalibracion(1);
 
-						FinTutorial(0);
-						FinTutorial(1);
-					}
-				}
+								FinTutorial(0);
+								FinTutorial(1);
+							}
+						}
 
-				if (PlayerInfo1.PJ == null && Input.GetKeyDown(KeyCode.W))
-				{
-					PlayerInfo1 = new PlayerInfo(0, Player1);
-					PlayerInfo1.LadoAct = Visualizacion.Lado.Izq;
-					SetPosicion(PlayerInfo1);
-				}
+						if (PlayerInfo1.PJ == null && Input.GetKeyDown(KeyCode.W))
+						{
+							PlayerInfo1 = new PlayerInfo(0, Player1);
+							PlayerInfo1.LadoAct = Visualizacion.Lado.Izq;
+							SetPosicion(PlayerInfo1);
+						}
 
-				if (PlayerInfo2.PJ == null && Input.GetKeyDown(KeyCode.UpArrow))
-				{
-					PlayerInfo2 = new PlayerInfo(1, Player2);
-					PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
-					SetPosicion(PlayerInfo2);
-				}
+						if (PlayerInfo2.PJ == null && Input.GetKeyDown(KeyCode.UpArrow))
+						{
+							PlayerInfo2 = new PlayerInfo(1, Player2);
+							PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
+							SetPosicion(PlayerInfo2);
+						}
 
-				//cuando los 2 pj terminaron los tutoriales empiesa la carrera
-				if (PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)
-				{
-					if (PlayerInfo1.FinTuto2 && PlayerInfo2.FinTuto2)
-					{
-						EmpezarCarrera();
-					}
+						//cuando los 2 pj terminaron los tutoriales empiesa la carrera
+						if (PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)
+						{
+							if (PlayerInfo1.FinTuto2 && PlayerInfo2.FinTuto2)
+							{
+								EmpezarCarrera();
+							}
+						}
+						break;
 				}
 
 				break;
@@ -196,7 +204,12 @@ public class GameManager : MonoBehaviour
 
 				TiempEspMuestraPts -= Time.deltaTime;
 				if (TiempEspMuestraPts <= 0)
-					Application.LoadLevel(Application.loadedLevel + 1);
+				{
+					if (modo == ModoJuego.Singleplayer)
+						ScenesManager.Instance.ChangeScene("Gameplay singleplayer");
+					else
+						ScenesManager.Instance.ChangeScene("Gameplay multiplayer");
+				}
 				break;
 		}
 	}
@@ -348,21 +361,23 @@ public class GameManager : MonoBehaviour
 		PosSeteada = true;
 
 
-		if (pjInf.PJ == Player1)
+		if(modo == ModoJuego.Multiplayer)
 		{
-			if (pjInf.LadoAct == Visualizacion.Lado.Izq)
-				Player2.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Der);
+			if (pjInf.PJ == Player1)
+			{
+				if (pjInf.LadoAct == Visualizacion.Lado.Izq)
+					Player2.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Der);
+				else
+					Player2.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Izq);
+			}
 			else
-				Player2.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Izq);
+			{
+				if (pjInf.LadoAct == Visualizacion.Lado.Izq)
+					Player1.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Der);
+				else
+					Player1.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Izq);
+			}
 		}
-		else
-		{
-			if (pjInf.LadoAct == Visualizacion.Lado.Izq)
-				Player1.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Der);
-			else
-				Player1.GetComponent<Visualizacion>().SetLado(Visualizacion.Lado.Izq);
-		}
-
 	}
 
 	void CambiarACarrera()

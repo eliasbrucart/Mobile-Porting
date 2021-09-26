@@ -100,50 +100,6 @@ public class Visualizacion : MonoBehaviour
 		Pj = GetComponent<Player>();
 	}
 	
-	//void OnGUI()
-	//{	
-	//	switch(Pj.EstAct)
-	//	{
-	//		
-	//		
-	//	case Player.Estados.EnConduccion:
-	//		//inventario
-	//		SetInv3();
-	//		//contador de dinero
-	//		SetDinero();
-	//		//el volante
-	//		SetVolante();
-	//		break;
-	//		
-	//		
-	//		
-	//	case Player.Estados.EnDescarga:
-	//		//inventario
-	//		SetInv3();
-	//		//el bonus
-	//		SetBonus();
-	//		//contador de dinero
-	//		SetDinero();			
-	//		break;
-	//		
-	//		
-	//	case Player.Estados.EnCalibracion:
-	//		//SetCalibr();
-	//		break;
-	//		
-	//		
-	//	case Player.Estados.EnTutorial:
-	//		SetInv3();
-	//		SetTuto();
-	//		SetVolante();
-	//		break;
-	//	}
-	//	
-	//	GUI.skin = null;
-	//}
-	
-	//--------------------------------------------------------//
-	
 	public void CambiarACalibracion()
 	{
 		//CamCalibracion.enabled = true;
