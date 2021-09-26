@@ -3,14 +3,15 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-	//public static Player[] Jugadoers;
-
 	public static GameManager Instancia;
 
 	public float TiempoDeJuego = 60;
 
 	public enum EstadoJuego { Calibrando, Jugando, Finalizado }
 	public EstadoJuego EstAct = EstadoJuego.Calibrando;
+
+	public enum ModoJuego { Singleplayer, Multiplayer}
+	public ModoJuego modo;
 
 	public PlayerInfo PlayerInfo1 = null;
 	public PlayerInfo PlayerInfo2 = null;
@@ -69,10 +70,15 @@ public class GameManager : MonoBehaviour
 	IList<int> users;
 
 	//--------------------------------------------------------//
+	static public GameManager instancia;
 
+	static public GameManager GetInstance { get { return instancia; } }
 	void Awake()
 	{
-		GameManager.Instancia = this;
+		if (instancia != this && instancia != null)
+			Destroy(this.gameObject);
+		else
+			instancia = this;
 	}
 
 	void Start()
@@ -83,8 +89,7 @@ public class GameManager : MonoBehaviour
 	void Update()
 	{
 		//REINICIAR
-		if (Input.GetKey(KeyCode.Mouse1) &&
-		   Input.GetKey(KeyCode.Keypad0))
+		if (Input.GetKey(KeyCode.Mouse1) && Input.GetKey(KeyCode.Keypad0))
 		{
 			Application.LoadLevel(Application.loadedLevel);
 		}
@@ -166,7 +171,7 @@ public class GameManager : MonoBehaviour
 					//Player1.rigidbody.velocity = Vector3.zero;
 					//Player2.rigidbody.velocity = Vector3.zero;
 
-					ConteoParaInicion -= T.GetDT();
+					ConteoParaInicion -= Time.deltaTime;
 					if (ConteoParaInicion < 0)
 					{
 						EmpezarCarrera();
@@ -176,7 +181,7 @@ public class GameManager : MonoBehaviour
 				else
 				{
 					//baja el tiempo del juego
-					TiempoDeJuego -= T.GetDT();
+					TiempoDeJuego -= Time.deltaTime;
 					if (TiempoDeJuego <= 0)
 					{
 						//termina el juego
@@ -184,8 +189,6 @@ public class GameManager : MonoBehaviour
 				}
 
 				break;
-
-
 			case EstadoJuego.Finalizado:
 
 				//nada de trakeo con kinect, solo se muestra el puntaje
@@ -194,48 +197,9 @@ public class GameManager : MonoBehaviour
 				TiempEspMuestraPts -= Time.deltaTime;
 				if (TiempEspMuestraPts <= 0)
 					Application.LoadLevel(Application.loadedLevel + 1);
-
 				break;
 		}
 	}
-
-	//void OnGUI()
-	//{
-	//	switch (EstAct)
-	//	{
-	//		case EstadoJuego.Jugando:
-	//			if (ConteoRedresivo)
-	//			{
-	//				GUI.skin = GS_ConteoInicio;
-	//
-	//				R.x = ConteoPosEsc.x * Screen.width / 100;
-	//				R.y = ConteoPosEsc.y * Screen.height / 100;
-	//				R.width = ConteoPosEsc.width * Screen.width / 100;
-	//				R.height = ConteoPosEsc.height * Screen.height / 100;
-	//
-	//				if (ConteoParaInicion > 1)
-	//				{
-	//					GUI.Box(R, ConteoParaInicion.ToString("0"));
-	//				}
-	//				else
-	//				{
-	//					GUI.Box(R, "GO");
-	//				}
-	//			}
-	//
-	//			GUI.skin = GS_TiempoGUI;
-	//			R.x = TiempoGUI.x * Screen.width / 100;
-	//			R.y = TiempoGUI.y * Screen.height / 100;
-	//			R.width = TiempoGUI.width * Screen.width / 100;
-	//			R.height = TiempoGUI.height * Screen.height / 100;
-	//			GUI.Box(R, TiempoDeJuego.ToString("00"));
-	//			break;
-	//	}
-	//
-	//	GUI.skin = null;
-	//}
-
-	//----------------------------------------------------------//
 
 	public void IniciarCalibracion()
 	{
@@ -413,15 +377,6 @@ public class GameManager : MonoBehaviour
 			ObjsCarrera[i].SetActive(true);
 		}
 
-		/*
-		for(int i = 0; i < ObjsTuto1.Length; i++)
-		{
-			ObjsTuto1[i].SetActiveRecursively(false);
-			ObjsTuto2[i].SetActiveRecursively(false);
-		}
-		*/
-
-
 		//desactivacion de la calibracion
 		PlayerInfo1.FinCalibrado = true;
 
@@ -448,9 +403,6 @@ public class GameManager : MonoBehaviour
 		{
 			ObjsTuto2[i].SetActive(true);
 		}
-
-
-
 
 		//posiciona los camiones dependiendo de que lado de la pantalla esten
 		if (PlayerInfo1.LadoAct == Visualizacion.Lado.Izq)
@@ -519,9 +471,6 @@ public class GameManager : MonoBehaviour
 				CambiarACarrera();//CambiarATutorial();
 
 	}
-
-
-
 
 	[System.Serializable]
 	public class PlayerInfo
