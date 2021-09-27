@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
 			Destroy(this.gameObject);
 		else
 			instancia = this;
+		DontDestroyOnLoad(this.gameObject);
 	}
 
 	void Start()
@@ -410,7 +411,6 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCalibracion2.Length; i++)
 		{
-			//ObjsCalibracion2[i].SetActive(false);
 			ObjsCalibracion2[i].SetActive(true);
 		}
 
@@ -457,13 +457,11 @@ public class GameManager : MonoBehaviour
 		if (playerID == 0)
 		{
 			PlayerInfo1.FinTuto2 = true;
-
 		}
 		else if (playerID == 1)
 		{
 			PlayerInfo2.FinTuto2 = true;
 		}
-
 		if (PlayerInfo1.FinTuto2 && PlayerInfo2.FinTuto2)
 		{
 			CambiarACarrera();
