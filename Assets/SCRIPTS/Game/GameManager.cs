@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-	public static GameManager Instancia;
-
 	public float TiempoDeJuego = 60;
 
 	public enum EstadoJuego { Calibrando, Jugando, Finalizado }
@@ -79,7 +77,7 @@ public class GameManager : MonoBehaviour
 			Destroy(this.gameObject);
 		else
 			instancia = this;
-		DontDestroyOnLoad(this.gameObject);
+		//DontDestroyOnLoad(this.gameObject);
 	}
 
 	void Start()
@@ -193,6 +191,7 @@ public class GameManager : MonoBehaviour
 					TiempoDeJuego -= Time.deltaTime;
 					if (TiempoDeJuego <= 0)
 					{
+						ScenesManager.Instance.ChangeScene("GameOver");
 						//termina el juego
 					}
 				}
@@ -206,10 +205,11 @@ public class GameManager : MonoBehaviour
 				TiempEspMuestraPts -= Time.deltaTime;
 				if (TiempEspMuestraPts <= 0)
 				{
-					if (modo == ModoJuego.Singleplayer)
-						ScenesManager.Instance.ChangeScene("Gameplay singleplayer");
-					else
-						ScenesManager.Instance.ChangeScene("Gameplay multiplayer");
+					ScenesManager.Instance.ChangeScene("GameOver");
+					//if (modo == ModoJuego.Singleplayer)
+					//	ScenesManager.Instance.ChangeScene("Gameplay singleplayer");
+					//else
+					//	ScenesManager.Instance.ChangeScene("Gameplay multiplayer");
 				}
 				break;
 		}
@@ -263,7 +263,6 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCalibracion1.Length; i++)
 		{
-			//ObjsCalibracion1[i].SetActive(false);
 			ObjsCalibracion1[i].SetActive(true);
 		}
 		Player1.GetComponent<Frenado>().Frenar();
@@ -276,7 +275,6 @@ public class GameManager : MonoBehaviour
 
 		for (int i = 0; i < ObjsCalibracion2.Length; i++)
 		{
-			//ObjsCalibracion2[i].SetActive(false);
 			ObjsCalibracion2[i].SetActive(true);
 		}
 
