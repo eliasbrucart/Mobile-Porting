@@ -19,7 +19,8 @@ public class InputManager : MonoBehaviour
 
     Dictionary<string, float> axisValues = new Dictionary<string, float>()
     {
-        {"Horizontal_1", 0f},{"Vertical_1", 0f}, {"Horizontal_2", 0f}, {"Vertical_2", 0f}
+        {"Horizontal_1", 0f},{"Vertical_1", 0f}, {"Horizontal_2", 0f}, {"Vertical_2", 0f},
+        { "Negative Horizontal_1", 0f}, {"Negative Horizontal_2", 0f}
     };
 
     public void SetAxis(string axis, float value)
@@ -29,9 +30,9 @@ public class InputManager : MonoBehaviour
 
     public float GetAxis(string axis)
     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_ANDROID || UNITY_IOS
         return axisValues[axis] + Input.GetAxis(axis);
-#elif UNITY_ANDROID || UNITY_IOS
+#elif UNITY_STANDALONE || UNITY_ANDROID || UNITY_IOS
         return axisValues[axis];
 #elif UNITY_STANDALONE
         return Input.GetAxis(axis);

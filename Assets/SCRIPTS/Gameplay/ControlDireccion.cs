@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ControlDireccion : MonoBehaviour 
 {
-	public enum TipoInput {Mouse, Kinect, AWSD, Arrows}
+	public enum TipoInput {Mouse, Kinect, AWSD, Arrows} //cambiar a numero para simplificar codigo
 	public TipoInput InputAct = ControlDireccion.TipoInput.Mouse;
 
 	public Transform ManoDer;
@@ -90,20 +90,20 @@ public class ControlDireccion : MonoBehaviour
 			break;
             case TipoInput.AWSD:
                 if (Habilitado) {
-                    if (Input.GetKey(KeyCode.A) || InputManager.Instance.GetAxis("Horizontal_1") < 0) {
+                    if (InputManager.Instance.GetAxis("Horizontal_1") < 0) {
                         gameObject.SendMessage("SetGiro", -1);
                     }
-                    if (Input.GetKey(KeyCode.D) || InputManager.Instance.GetAxis("Horizontal_1") > 0) {
+                    if (InputManager.Instance.GetAxis("Horizontal_1") > 0) {
                         gameObject.SendMessage("SetGiro", 1);
                     }
                 }
                 break;
             case TipoInput.Arrows:
                 if (Habilitado) {
-                    if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Instance.GetAxis("Horizontal_2") < 0) {
+                    if (InputManager.Instance.GetAxis("Horizontal_2") < 0) {
                         gameObject.SendMessage("SetGiro", -1);
                     }
-                    if (Input.GetKey(KeyCode.RightArrow) || InputManager.Instance.GetAxis("Horizontal_2") > 0) {
+                    if (InputManager.Instance.GetAxis("Horizontal_2") > 0) {
                         gameObject.SendMessage("SetGiro", 1);
                     }
                 }

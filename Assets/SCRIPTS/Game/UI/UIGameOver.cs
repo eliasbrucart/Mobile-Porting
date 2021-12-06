@@ -10,21 +10,15 @@ public class UIGameOver : MonoBehaviour
 
     void Start()
     {
-        scorePlayer1.text = "Score: " + GameManager.instancia.Player1.Dinero;
-        scorePlayer2.text = "Score: " + GameManager.instancia.Player2.Dinero;
-    }
-
-    void Update()
-    {
-        //if(GameManager.Instancia.modo == GameManager.ModoJuego.Multiplayer)
-        //{
-        //    scorePlayer1.text = "Score: " + GameManager.Instancia.Player1.Dinero;
-        //    scorePlayer2.text = "Score: " + GameManager.Instancia.Player2.Dinero;
-        //}
-        //else
-        //{
-        //    scorePlayer2.gameObject.SetActive(false);
-        //    scorePlayer1.text = "Score: " + GameManager.Instancia.Player1.Dinero;
-        //}
+        if (GameManager.instancia.modo == GameManager.ModoJuego.Multiplayer)
+        {
+            scorePlayer1.text = "Score: " + GameManager.instancia.Player1.Dinero;
+            scorePlayer2.text = "Score: " + GameManager.instancia.Player2.Dinero;
+        }
+        else
+        {
+            scorePlayer2.gameObject.SetActive(false);
+            scorePlayer1.text = "Score: " + GameManager.instancia.Player1.Dinero;
+        }
     }
 }
