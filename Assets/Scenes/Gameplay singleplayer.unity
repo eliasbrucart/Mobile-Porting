@@ -115451,6 +115451,16 @@ PrefabInstance:
       propertyPath: Controlador
       value: 
       objectReference: {fileID: 1925774386}
+    - target: {fileID: 1058539499393714348, guid: bf53947154efebf45815432c8c0ee91e,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058539499393714348, guid: bf53947154efebf45815432c8c0ee91e,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1058539499393714426, guid: bf53947154efebf45815432c8c0ee91e,
         type: 3}
       propertyPath: m_RootOrder
@@ -116028,7 +116038,7 @@ PrefabInstance:
     - target: {fileID: 183649624865455279, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -184
+      value: -148.9
       objectReference: {fileID: 0}
     - target: {fileID: 183649624865455279, guid: f4b93a12c109ab3488c3ad62b94ad7b1,
         type: 3}

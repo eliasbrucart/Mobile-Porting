@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
+    public enum GameMode
+    {
+        Singleplayer,
+        Multiplayer
+    }
     public enum SelectedInput
     {
         WASD,
@@ -11,6 +16,7 @@ public class Tutorial : MonoBehaviour
     public SelectedInput selectedInput;
     public enum StatesTutorial { Calibrando, Tutorial, Finalizado }
     public StatesTutorial EstAct = StatesTutorial.Calibrando;
+    public GameMode actualMode;
     void Start()
     {
         EstAct = StatesTutorial.Calibrando;
@@ -23,7 +29,7 @@ public class Tutorial : MonoBehaviour
 
     private void TutorialInput()
     {
-        if(selectedInput == SelectedInput.Arrows)
+        if(selectedInput == SelectedInput.Arrows || actualMode == GameMode.Singleplayer)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow))
                 EstAct = StatesTutorial.Tutorial;
@@ -47,8 +53,10 @@ public class Tutorial : MonoBehaviour
 
     private void CheckTutorialFinish()
     {
-        if (EstAct == StatesTutorial.Finalizado)
+        if (EstAct == StatesTutorial.Finalizado && actualMode == GameMode.Multiplayer)
             SceneManager.LoadScene("Gameplay multiplayer");
+        else if (EstAct == StatesTutorial.Finalizado && actualMode == GameMode.Singleplayer)
+            SceneManager.LoadScene("Gameplay singleplayer");
         //chequear que tutorial termino para darle velocidad al camion correspondiente
     }
 }
