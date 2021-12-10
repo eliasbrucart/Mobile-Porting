@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Deposito
+  - Terreno
+  - Obstaculo
+  - Mano
+  - Cinta
+  - Estante
+  - FinTaxi
+  - Player2
   layers:
   - Default
   - TransparentFX

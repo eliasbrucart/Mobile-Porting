@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
 	public ContrTutorial ContrTuto;
 	
 	Visualizacion MiVisualizacion;
-	
+
+	[SerializeField] private UIGameplay uiGameplay;
 	//------------------------------------------------------------------//
 
 	// Use this for initialization
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
 			Bolasas[i] = null;
 		
 		MiVisualizacion = GetComponent<Visualizacion>();
+		uiGameplay = FindObjectOfType<UIGameplay>();
 	}
 	
 	// Update is called once per frame
@@ -104,12 +106,20 @@ public class Player : MonoBehaviour
 	{
 		MiVisualizacion.CambiarAConduccion();
 		EstAct = Player.Estados.EnConduccion;
+		if(gameObject.tag == "Player")
+			uiGameplay.DisableButtons("P1");
+		else if(gameObject.tag == "Player2")
+			uiGameplay.DisableButtons("P2");
 	}
-	
+
 	public void CambiarADescarga()
 	{
 		MiVisualizacion.CambiarADescarga();
 		EstAct = Player.Estados.EnDescarga;
+		if (gameObject.tag == "Player")
+			uiGameplay.ActivateButtons("P1");
+		else if (gameObject.tag == "Player2")
+			uiGameplay.ActivateButtons("P2");
 	}
 	
 	public void SacarBolasa()
