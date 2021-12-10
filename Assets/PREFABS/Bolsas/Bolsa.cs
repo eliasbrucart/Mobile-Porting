@@ -5,7 +5,7 @@ public class Bolsa : MonoBehaviour
 {
 	public Pallet.Valores Monto;
 	//public int IdPlayer = 0;
-	public string TagPlayer = "";
+	//public string TagPlayer = "";
 	public Texture2D ImagenInventario;
 	Player Pj = null;
 	
@@ -45,7 +45,7 @@ public class Bolsa : MonoBehaviour
 	
 	void OnTriggerEnter(Collider coll)
 	{
-		if(coll.tag == TagPlayer)
+		if(coll.tag == "Player" || coll.tag == "Player2")
 		{
 			Pj = coll.GetComponent<Player>();
 			//if(IdPlayer == Pj.IdPlayer)

@@ -413,7 +413,7 @@ public class Visualizacion : MonoBehaviour
 			//GS_Inv.box.normal.background = TextInvDer[contador];
 			else
 			{
-				TempParp += T.GetDT();
+				TempParp += Time.deltaTime;
 
 				if (TempParp >= Parpadeo)
 				{
@@ -442,7 +442,7 @@ public class Visualizacion : MonoBehaviour
 			//GS_Inv.box.normal.background = TextInvIzq[contador];
 			else
 			{
-				TempParp += T.GetDT();
+				TempParp += Time.deltaTime;
 
 				if (TempParp >= Parpadeo)
 				{
