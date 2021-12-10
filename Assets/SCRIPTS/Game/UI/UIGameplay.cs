@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class UIGameplay : MonoBehaviour
 {
-    //public TMP_Text capturedBags;
+    [SerializeField] private TMP_Text capturedBagsP1;
+    [SerializeField] private TMP_Text capturedBagsP2;
     //public List<Button> uiButtonListP1 = new List<Button>();
     //public List<Button> uiButtonListP2 = new List<Button>();
     public GameObject buttonsP1;
@@ -20,7 +21,8 @@ public class UIGameplay : MonoBehaviour
 
     void Update()
     {
-        //capturedBags.text = "";
+        capturedBagsP1.text = "" + gm.Player1.Dinero;
+        capturedBagsP2.text = "" + gm.Player2.Dinero;
     }
 
     public void ActivateButtons(string player)
