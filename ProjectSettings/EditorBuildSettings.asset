@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial singleplayer.unity
     guid: 7663fa0632acebc4682375afd4e63653
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 39dcd148888d6624a8607c513ef96648
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: bc91b290a39091b4fb24b1615b193c9d
   - enabled: 1
