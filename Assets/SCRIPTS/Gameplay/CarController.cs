@@ -6,10 +6,10 @@ public class CarController : MonoBehaviour {
 
     public List<WheelCollider> throttleWheels = new List<WheelCollider>();
     public List<WheelCollider> steeringWheels = new List<WheelCollider>();
-    public float throttleCoefficient = 20.0f;
-    public float maxTurn = 20f;
-    float giro = 0f;
-    float acel = 0.5f;
+    public float throttleCoefficient;
+    public float maxTurn;
+    float giro = 0.0f;
+    float acel = 0.2f;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +20,7 @@ public class CarController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         foreach (var wheel in throttleWheels) {
-            wheel.motorTorque += throttleCoefficient * Time.deltaTime * acel;
+            wheel.motorTorque = throttleCoefficient * Time.deltaTime * acel;
         }
         foreach (var wheel in steeringWheels) {
             wheel.steerAngle = maxTurn * giro;
