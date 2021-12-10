@@ -115448,6 +115448,11 @@ PrefabInstance:
       objectReference: {fileID: 879035790}
     - target: {fileID: 1058539498233341881, guid: bf53947154efebf45815432c8c0ee91e,
         type: 3}
+      propertyPath: miInput
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058539498233341881, guid: bf53947154efebf45815432c8c0ee91e,
+        type: 3}
       propertyPath: Controlador
       value: 
       objectReference: {fileID: 1925774386}
