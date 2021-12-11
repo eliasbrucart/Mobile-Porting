@@ -25,7 +25,7 @@ public class ControlDireccion : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-	
+
 	}
 	
 	// Update is called once per frame
@@ -70,8 +70,8 @@ public class ControlDireccion : MonoBehaviour
 					Giro = Angulo() / (MaxAng + DesSencibilidad);
 				else
 					Giro = 1;
-				
-				if(Habilitado)
+
+					if (Habilitado)
 					gameObject.SendMessage("SetGiro", Giro);//debe ser reemplanado
 				
 				break;
@@ -83,30 +83,31 @@ public class ControlDireccion : MonoBehaviour
 					Giro = (-1);
 				
 				if(Habilitado)
-					gameObject.SendMessage("SetGiro", Giro);//debe ser reemplanado
-				
-				break;
+
+						gameObject.SendMessage("SetGiro", Giro);//debe ser reemplanado
+
+						break;
 			}
 			break;
             case TipoInput.AWSD:
                 if (Habilitado) {
                     if (InputManager.Instance.GetAxis("Horizontal_1") < 0) {
-                        gameObject.SendMessage("SetGiro", -1);
-                    }
-                    if (InputManager.Instance.GetAxis("Horizontal_1") > 0) {
-                        gameObject.SendMessage("SetGiro", 1);
-                    }
-                }
+						gameObject.SendMessage("SetGiro", -1);
+					}
+					if (InputManager.Instance.GetAxis("Horizontal_1") > 0) {
+						gameObject.SendMessage("SetGiro", 1);
+					}
+				}
                 break;
             case TipoInput.Arrows:
                 if (Habilitado) {
                     if (InputManager.Instance.GetAxis("Horizontal_2") < 0) {
-                        gameObject.SendMessage("SetGiro", -1);
-                    }
-                    if (InputManager.Instance.GetAxis("Horizontal_2") > 0) {
-                        gameObject.SendMessage("SetGiro", 1);
-                    }
-                }
+						gameObject.SendMessage("SetGiro", -1);
+					}
+					if (InputManager.Instance.GetAxis("Horizontal_2") > 0) {
+						gameObject.SendMessage("SetGiro", 1);
+					}
+				}
                 break;
         }		
 	}

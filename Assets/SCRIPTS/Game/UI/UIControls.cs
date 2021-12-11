@@ -7,27 +7,27 @@ public class UIControls : MonoBehaviour
 {
     public void UpOne()
     {
-        InputManager.Instance.GetAxis("Vertical_1");
+        InputManager.Instance.SetAxis("Vertical_1", 1);
     }
     public void LeftOne()
     {
-        InputManager.Instance.GetAxis("Negative Horizontal_1");
+        InputManager.Instance.SetAxis("Horizontal_1", -1);
     }
     public void RightOne()
     {
-        InputManager.Instance.GetAxis("Horizontal_1");
+        InputManager.Instance.SetAxis("Horizontal_1", 1);
     }
 
     public void UpTwo()
     {
-        InputManager.Instance.GetAxis("Vertical_2");
+        InputManager.Instance.SetAxis("Vertical_2", 1);
     }
     public void LeftTwo()
     {
-        InputManager.Instance.GetAxis("Negative Horizontal_2");
+        InputManager.Instance.SetAxis("Horizontal_2", -1);
     }
     public void RightTwo()
     {
-        InputManager.Instance.GetAxis("Horizontal_2");
+        InputManager.Instance.SetAxis("Horizontal_2", 1);
     }
 }
