@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &210
 GameObject:
   m_ObjectHideFlags: 0
@@ -115262,6 +115262,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 830724906}
     m_Modifications:
+    - target: {fileID: 194710482889538928, guid: c2c703fbb866a734585a8fa04465296c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 830724908}
+    - target: {fileID: 194710482889538928, guid: c2c703fbb866a734585a8fa04465296c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeftTwo
+      objectReference: {fileID: 0}
     - target: {fileID: 194710483601930324, guid: c2c703fbb866a734585a8fa04465296c,
         type: 3}
       propertyPath: m_Name
@@ -115341,6 +115351,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194710483938702886, guid: c2c703fbb866a734585a8fa04465296c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 830724908}
+    - target: {fileID: 194710483938702886, guid: c2c703fbb866a734585a8fa04465296c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 194710484673485108, guid: c2c703fbb866a734585a8fa04465296c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 830724908}
+    - target: {fileID: 194710484673485108, guid: c2c703fbb866a734585a8fa04465296c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RightTwo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c703fbb866a734585a8fa04465296c, type: 3}
@@ -115703,6 +115733,7 @@ GameObject:
   - component: {fileID: 830724904}
   - component: {fileID: 830724903}
   - component: {fileID: 830724907}
+  - component: {fileID: 830724908}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -115811,6 +115842,18 @@ MonoBehaviour:
   timeLeft: {fileID: 1869415123}
   buttonsP1: {fileID: 313723513}
   buttonsP2: {fileID: 0}
+--- !u!114 &830724908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830724902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4df54696abad349bd281df8287fc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &879035790 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1058539499393721207, guid: bf53947154efebf45815432c8c0ee91e,
