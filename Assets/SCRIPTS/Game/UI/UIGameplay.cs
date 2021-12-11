@@ -9,6 +9,7 @@ public class UIGameplay : MonoBehaviour
     [SerializeField] private TMP_Text capturedBagsP1;
     [SerializeField] private TMP_Text capturedBagsP2;
     [SerializeField] private TMP_Text timeLeft;
+    [SerializeField] private GameObject pausePanel;
     public GameObject buttonsP1;
     public GameObject buttonsP2;
 
@@ -18,8 +19,8 @@ public class UIGameplay : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
         if (gm.modo == GameManager.ModoJuego.Singleplayer)
         {
-            capturedBagsP2.gameObject.SetActive(false);
-            buttonsP2.SetActive(false);
+            capturedBagsP2 = null;
+            buttonsP2 = null;
         }
     }
 
@@ -61,5 +62,17 @@ public class UIGameplay : MonoBehaviour
             if (buttonsP2 != null)
                 buttonsP2.SetActive(false);
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
     }
 }
