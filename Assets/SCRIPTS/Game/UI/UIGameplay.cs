@@ -16,12 +16,22 @@ public class UIGameplay : MonoBehaviour
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
+        if (gm.modo == GameManager.ModoJuego.Singleplayer)
+        {
+            capturedBagsP2.gameObject.SetActive(false);
+            buttonsP2.SetActive(false);
+        }
     }
 
     void Update()
     {
-        capturedBagsP1.text = "" + gm.Player1.Dinero;
-        capturedBagsP2.text = "" + gm.Player2.Dinero;
+        if(gm.modo == GameManager.ModoJuego.Multiplayer)
+        {
+            capturedBagsP1.text = "" + gm.Player1.Dinero;
+            capturedBagsP2.text = "" + gm.Player2.Dinero;
+        }
+        else
+            capturedBagsP1.text = "" + gm.Player1.Dinero;
         timeLeft.text = "" + gm.TiempoDeJuego.ToString("F0");
     }
 

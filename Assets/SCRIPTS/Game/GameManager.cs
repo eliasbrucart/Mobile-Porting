@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-	public float TiempoDeJuego = 60;
+	public float TiempoDeJuego;
 
 	public enum EstadoJuego { Calibrando, Jugando, Finalizado }
 	public EstadoJuego EstAct = EstadoJuego.Calibrando;

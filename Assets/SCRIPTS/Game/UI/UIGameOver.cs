@@ -15,7 +15,7 @@ public class UIGameOver : MonoBehaviour
             scorePlayer1.text = "Score: " + GameManager.instancia.Player1.Dinero;
             scorePlayer2.text = "Score: " + GameManager.instancia.Player2.Dinero;
         }
-        else
+        else if(GameManager.instancia.modo == GameManager.ModoJuego.Singleplayer)
         {
             scorePlayer2.gameObject.SetActive(false);
             scorePlayer1.text = "Score: " + GameManager.instancia.Player1.Dinero;
