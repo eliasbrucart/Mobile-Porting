@@ -41,7 +41,7 @@ public class Obstaculo : MonoBehaviour
 			Tempo2 += Time.deltaTime;
 			if(Tempo2 > TiempDesapareciendo)
 			{
-				gameObject.SetActiveRecursively(false);
+				gameObject.SetActive(false);
 			}
 		}
 	}

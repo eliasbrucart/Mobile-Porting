@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: da9ec7120df1ffe45be34a34e80b1c0b
   - enabled: 1
-    path: Assets/Scenes/Gameplay multiplayer.unity
-    guid: 6a990c81459e9b04c87adbbd2d639bbd
-  - enabled: 1
     path: Assets/Scenes/Tutorial singleplayer.unity
     guid: 7663fa0632acebc4682375afd4e63653
   - enabled: 1
@@ -23,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay singleplayer.unity
     guid: 0eb8aace8cd79264c8e3a57a62464488
+  - enabled: 1
+    path: Assets/Scenes/Tutorial multiplayer.unity
+    guid: 3519ae741f7468045adeba0d7c1e9e0f
+  - enabled: 1
+    path: Assets/Scenes/Gameplay multiplayer.unity
+    guid: 6a990c81459e9b04c87adbbd2d639bbd
   m_configObjects: {}

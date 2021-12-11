@@ -303,7 +303,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Gameplay singleplayer
+          m_StringArgument: Tutorial singleplayer
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &218707728
@@ -1361,6 +1361,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439387375}
   m_CullTransparentMesh: 0
+--- !u!1001 &1453999879
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859486, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498736319046859487, guid: 238e80cfa4f7a2e4fbb32747e67e6a48,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 238e80cfa4f7a2e4fbb32747e67e6a48, type: 3}
 --- !u!1 &1671855221
 GameObject:
   m_ObjectHideFlags: 0
