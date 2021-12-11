@@ -31,9 +31,9 @@ public class Tutorial : MonoBehaviour
     {
         if(selectedInput == SelectedInput.Arrows || actualMode == GameMode.Singleplayer)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow))
+            if (InputManager.Instance.GetAxis("Horizontal_1") > 0 && InputManager.Instance.GetAxis("Vertical_1") > 0)
                 EstAct = StatesTutorial.Tutorial;
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (InputManager.Instance.GetAxis("Horizontal_1") < 0)
             {
                 EstAct = StatesTutorial.Finalizado;
                 CheckTutorialFinish();
@@ -41,9 +41,9 @@ public class Tutorial : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.W))
+            if (InputManager.Instance.GetAxis("Horizontal_2") > 0 && InputManager.Instance.GetAxis("Vertical_2") > 0)
                 EstAct = StatesTutorial.Tutorial;
-            if (Input.GetKeyDown(KeyCode.D))
+            if (InputManager.Instance.GetAxis("Horizontal_2") < 0)
             {
                 EstAct = StatesTutorial.Finalizado;
                 CheckTutorialFinish();
